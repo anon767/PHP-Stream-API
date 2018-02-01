@@ -2,6 +2,8 @@
   "name": "anon767/phpstream",
   "description": "stream api for php",
   "minimum-stability": "stable",
+  "version": "1.0.0",
+  "license": "MIT",
   "authors": [
     {
       "name": "tom",
