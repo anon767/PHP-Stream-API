@@ -8,7 +8,7 @@
 
 namespace Stream;
 
-class Stream
+class Stream implements Streamable
 {
     private $array;
 
@@ -161,8 +161,8 @@ class Stream
     {
         $array = $this->array;
         if (count($array) <= 0)
-            return null;
-        return $array[0];
+            return new Cell(null);
+        return new Cell($array[0]);
     }
 
     /**
@@ -171,7 +171,7 @@ class Stream
     public function last()
     {
         $array = $this->array;
-        return $array[count($array) - 1];
+        return new Cell($array[count($array) - 1]);
     }
 
     /**
@@ -183,9 +183,9 @@ class Stream
         $array = $this->array;
         for ($i = 0; $i < count($array); $i++) {
             if (call_user_func_array($callback, [$array[$i], $i]))
-                return $array[$i];
+                return new Cell($array[$i]);
         }
-        return null;
+        return new Cell(null);
     }
 
     /**
@@ -223,7 +223,6 @@ class Stream
         }
         return false;
     }
-
 
 
 }

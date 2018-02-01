@@ -21,17 +21,17 @@ class StreamTest extends TestCase
 
     public function testFilterAndFirst()
     {
-        $this->assertEquals((new Stream($this->array))->filter(function ($v) { return $v == 1; })->first(), 1);
+        $this->assertEquals((new Stream($this->array))->filter(function ($v) { return $v == 1; })->first()->orElse(0), 1);
     }
 
     public function testEmpty()
     {
-        $this->assertEquals(Stream::empty()->first(), null);
+        $this->assertEquals(Stream::empty()->first()->orElse(null), null);
     }
 
     public function testFindFirst()
     {
-        $this->assertEquals(Stream::asStream($this->array)->findFirst(function ($v) { return $v % 3 == 0; }), 3);
+        $this->assertEquals(Stream::asStream($this->array)->findFirst(function ($v) { return $v % 3 == 0; })->orElse(null), 3);
     }
 
     public function testMap()
@@ -54,4 +54,7 @@ class StreamTest extends TestCase
         $this->assertEquals(Stream::asStream($this->array)->some(function ($v) { return $v % 3 == 0; }), true);
         $this->assertEquals(Stream::asStream($this->array)->some(function ($v) { return $v < 0; }), false);
     }
+
+
+
 }

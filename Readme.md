@@ -14,7 +14,12 @@ Im publishing this library because I'm using it in almost all of my PHP-Projects
 
 ## Usage
 
-You can transform any traditional Array into a Stream either like that
+You can transform any traditional Array into a Stream either like that.
+Stream-methods that return single elements from an array wrap those into Cells (compare Java optional).
+
+Those values inside can be accessed via ```$cell->unwrap()``` or ```$celll->orElse($default)```.
+
+unwrapping a cell with a null value inside throws a "NoElementException"
 
 
 ```PHP
@@ -38,11 +43,11 @@ The most functions from the Java Stream Api are implemented.
 ```PHP
 $array = [1,2,3,4,5,6,7,8,9,10];
 $onlyEvenNumbers = Stream::asStream($array)->filter(function($v){return $v%2==0;});
-$firstEvenNumber = $onlyEvenNumbers->first();
+$firstEvenNumber = $onlyEvenNumbers->first()->unwrap();
 ```
 or in one line
 ```PHP
-$onlyEvenNumbers = Stream::asStream([1,2,3,4,5,6,7,8,9,10])->filter(function($v){return $v%2==0;})->first();
+$onlyEvenNumbers = Stream::asStream([1,2,3,4,5,6,7,8,9,10])->filter(function($v){return $v%2==0;})->first()->unwrap();
 ```
 
 #### square all numbers in an array
