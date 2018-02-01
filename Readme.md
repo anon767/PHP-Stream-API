@@ -12,6 +12,16 @@ Im publishing this library because I'm using it in almost all of my PHP-Projects
 1. PHP >= 5
 2. PHPUnit for development
 
+## install
+execute 
+```composer require anon767/phpstream```
+
+or add following to your composer.json
+
+"require": {
+    "anon767/phpstream": "*"
+  }
+
 ## Usage
 
 You can transform any traditional Array into a Stream either like that.
