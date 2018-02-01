@@ -224,5 +224,12 @@ class Stream implements Streamable
         return false;
     }
 
+    /**
+     * @param Stream $stream
+     * @return Stream
+     */
+    public function concat(Stream $stream){
+        return new Stream(array_merge($this->array,$stream->asArray()));
+    }
 }
 

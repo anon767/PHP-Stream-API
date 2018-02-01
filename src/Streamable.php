@@ -2,7 +2,7 @@
 /**
  * @project: streams
  * @package: Stream
- * @author: Tom Ganz
+ * @author: Tom
  * @date: 01.02.2018
  */
 
