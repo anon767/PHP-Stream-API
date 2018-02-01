@@ -24,13 +24,13 @@ or add following to your composer.json
 ```
 ## Usage
 
-You can transform any traditional Array into a Stream either like that.
 Stream-methods that return single elements from an array wrap those into Cells (compare Java optional).
 
-Those values inside can be accessed via ```$cell->unwrap()``` or ```$celll->orElse($default)```.
+Those values inside can be accessed via ```$cell->unwrap()``` or ```$cell->orElse($default)```.
 
 unwrapping a cell with a null value inside throws a "NoElementException"
 
+You can transform any traditional Array into a Stream either like that.
 
 ```PHP
 use Stream/Stream;
