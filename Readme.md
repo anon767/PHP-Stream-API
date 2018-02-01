@@ -85,7 +85,7 @@ $a = new ArrayList();
 $a[] = 1;
 $a[] = 2;
 $a[] = 3;
-$this->assertEquals($a->toStream()->first()->orElse(null), 1);
+echo $a->toStream()->first()->orElse(null); // prints 1
 ```
 
 
