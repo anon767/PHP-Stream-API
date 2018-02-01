@@ -1,7 +1,7 @@
 <?php
 /**
  * @project: streams
- * @author: Tom Ganz
+ * @author: Tom
  * @date: 01.02.2018
  * Basic Stream Wrapper for Arrays
  */
