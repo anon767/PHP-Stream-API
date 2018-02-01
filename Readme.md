@@ -17,11 +17,11 @@ execute
 ```composer require anon767/phpstream```
 
 or add following to your composer.json
-
+```
 "require": {
     "anon767/phpstream": "*"
   }
-
+```
 ## Usage
 
 You can transform any traditional Array into a Stream either like that.
