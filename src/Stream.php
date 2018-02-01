@@ -8,6 +8,7 @@
 
 namespace Stream;
 
+
 class Stream implements Streamable
 {
     private $array;
@@ -228,8 +229,9 @@ class Stream implements Streamable
      * @param Stream $stream
      * @return Stream
      */
-    public function concat(Stream $stream){
-        return new Stream(array_merge($this->array,$stream->asArray()));
+    public function concat(Stream $stream)
+    {
+        return new Stream(array_merge($this->array, $stream->asArray()));
     }
 }
 

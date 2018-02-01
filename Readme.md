@@ -6,7 +6,8 @@ This library is based upon the Stream-Api from Java and the Array-Prototype from
 
 (https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-Im publishing this library because I'm using it in almost all of my PHP-Projects.
+If you like functional patterns, readable code or immutable Datatypes and miss it in PHP, you should definitely give it a try. 
+
 
 ## Dependencies
 1. PHP >= 5
@@ -73,6 +74,20 @@ $squares = Stream::asStream($array)->map(function($v){return $v*$v;});
 $array = [1,2,3,4,5,6,7,8,9,10];
 Stream::asStream($array)->forEach(function($v){echo $v;});
 ```
+
+#### ArrayList
+
+The ArrayList class extends ArrayObject and can be therefore used just like a normal PHP array.
+Although it can be directly converted to a Stream
+
+```PHP
+$a = new ArrayList();
+$a[] = 1;
+$a[] = 2;
+$a[] = 3;
+$this->assertEquals($a->toStream()->first()->orElse(null), 1);
+```
+
 
 
 ## License
