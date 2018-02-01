@@ -8,9 +8,14 @@ This library is based upon the Stream-Api from Java and the Array-Prototype from
 
 Im publishing this library because I'm using it in almost all of my PHP-Projects.
 
+## Dependencies
+1. PHP >= 5
+2. PHPUnit for development
+
 ## Usage
 
 You can transform any traditional Array into a Stream either like that
+
 
 ```PHP
 use Stream/Stream;
