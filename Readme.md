@@ -64,7 +64,7 @@ $firstEvenNumber = Stream::asStream([1,2,3,4,5,6,7,8,9,10])->filter(function($v)
 
 ```PHP
 $array = [1,2,3,4,5,6,7,8,9,10];
-$quares = Stream::asStream($array)->map(function($v){return $v*$v;});
+$squares = Stream::asStream($array)->map(function($v){return $v*$v;});
 ```
 
 #### Print all numbers in an array
