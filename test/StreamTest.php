@@ -2,7 +2,7 @@
 /**
  * @project: streams
  * @package: ${NAMESPACE}
- * @author: Tom Ganz
+ * @author: Tom
  * @date: 01.02.2018
  */
 
@@ -54,7 +54,5 @@ class StreamTest extends TestCase
         $this->assertEquals(Stream::asStream($this->array)->some(function ($v) { return $v % 3 == 0; }), true);
         $this->assertEquals(Stream::asStream($this->array)->some(function ($v) { return $v < 0; }), false);
     }
-
-
-
 }
+
