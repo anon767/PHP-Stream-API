@@ -42,7 +42,7 @@ $firstEvenNumber = $onlyEvenNumbers->first();
 ```
 or in one line
 ```PHP
-$onlyEvenNumbers = Stream::asStream([1,2,3,4,5,6,7,8,9,10])->filter(function($v){return $v%2==0;})->first();
+$firstEvenNumber = Stream::asStream([1,2,3,4,5,6,7,8,9,10])->filter(function($v){return $v%2==0;})->first();
 ```
 
 #### square all numbers in an array
